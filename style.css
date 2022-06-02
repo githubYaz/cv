@@ -23,7 +23,7 @@
     width: 100%;
     margin: 0;
     padding:0;
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
   }
@@ -48,14 +48,100 @@
   .ecran2 {
     width: 100%;
     background-color: rgb(247, 222, 190);/*#d2c7c5*/ /*#c5bab8*/
-    display: flex;
-    flex-direction: row-reverse;
 
   }
+
+  .ecran2 h1{
+    text-align: center;
+    color: #A0522D;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 40px;
+    padding-top: 3%;
+    margin-bottom: 10%;
+  }
+
+  .item1 { grid-area: header; }
+  .item2 { grid-area: menu; }
+  .item3 { grid-area: main; }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header menu menu main main'
+      'header header menu menu main main'
+      'header header menu menu main main';
+    gap: 200px;
+    padding: 10px;
+  }
   
+  .grid-container > div {
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .lang_info{
+    display: inline-block;
+  }
+
+  .lang_info h2{
+    font-size: 30px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+    color:#b33c00;
+    text-decoration: underline;
+  }
+
+  .lang_info li{
+    font-size: 22px;
+    margin: 22px;
+    list-style-type:circle;
+    color: #A0522D;
+  }
+
+  .outil_info{
+    display: inline-block;
+  }
+
+  .outil_info h2{
+    font-size: 30px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+    color:#b33c00;
+    text-decoration: underline;
+  }
+
+  .outil_info li{
+    font-size: 22px;
+    margin: 22px;
+    list-style-type:circle;
+    color: #A0522D;
+  }
+
+  .atout{
+    display: inline-block;
+  }
+
+  .atout h2{
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: bolder;
+    color:#b33c00;
+    text-decoration: underline;
+  }
+
+  .atout li{
+    font-size: 22px;
+    margin: 22px;
+    list-style-type:circle;
+    color: #A0522D;
+  }
+
   /* ecran 3*/
   .ecran3 {
     width: 100%;
+    background-color: 	#DEB887;
   }
   
   /* ecran 4*/
@@ -118,12 +204,25 @@ li{ /*Sections du menu */
 }
 
 h1{  /*Titres des parties */
-  justify-self: flex-start;
-  align-self: flex-start;
+  align-self: center;
 }
 
-
-
-.comp_info{
-
-}
+.contain-tout{
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  }
+  .form-container{
+  width: 50%;
+  height: 100%;
+  }
+  #contact-form{
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px;
+  }
+  

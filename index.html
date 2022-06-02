@@ -1,97 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Mon cv en ligne</title>
-    </head>
-
-    <body>
-
-        <!--Menu de redirection-->
-        <div id="blocPrincipal">
-            <nav>
-                <ul>
-                    <li><a>Accueil</a></li>
-                    <li><a>Compétences</a></li>
-                    <li><a>Formation</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>A propos</a></li>
-                    <li><a>Contact</a></li>
-                </ul>
-            </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Mon cv en ligne</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('2HnyilJrI3sIzMO2B');
+        })();
+    </script>
+</head>
 
 
+<body>
 
-            <!--ecran 1-->
-            <div class="ecran ecran1" id="acceuil">
-
-                <img id="fond_ecran" src="./image/fond_ecran_ordi.png" alt="fond ecran ordi">
-
-                <span id = "intro">
-                    Bienvenue sur mon site web. <br> <br>
-                    Vous trouverez ici tout ce qui concerne mon profil professionnel. <br>
-                    C'est à dire mes expériences, mes compétences, et mon parcours de formation.
-                </span>
-
-            </div>
+    <!--Menu de redirection-->
+    <div id="blocPrincipal">
+        <nav>
+            <ul>
+                <li><a>Accueil</a></li>
+                <li><a>Compétences</a></li>
+                <li><a>Formation</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>A propos</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
 
 
 
+        <!--ecran 1-->
+        <div class="ecran ecran1" id="acceuil">
+
+            <img id="fond_ecran" src="./image/fond_ecran_ordi.png" alt="fond ecran ordi">
+
+            <span id="intro">
+                Bienvenue sur mon site web. <br> <br>
+                Vous trouverez ici tout ce qui concerne mon profil professionnel. <br>
+                C'est à dire mes expériences, mes compétences, et mon parcours de formation.
+            </span>
+
+        </div>
 
 
-            <!--ecran 2-->
-            <div class="ecran ecran2" id ="compétences">
-                <h1>Compétences</h1>
 
-                <div class="liste_comp">
-                    <div class ="comp_info">
-                        <h2>Langages informatiques</h2>
 
-                        <ul>
-                            <li>HTML/CSS/JavaScript</li>
+
+        <!--ecran 2-->
+        <div class="ecran ecran2" id="compétences">
+            <h1>Compétences</h1>
+            <div class="liste_comp">
+                <div class="grid-container">
+                    <div class="item1">
+                        <ul class="lang_info">
+                            <h2>Langages informatiques:</h2>
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
                             <li>PHP</li>
-                            <li>Java</li>
                             <li>Python</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    <div class="item2">
+                        <ul class="outil_info">
+                            <h2>Outils informatiques:</h2>
+                            <li>PHPmyAdmin / MySQL</li>
+                            <li>Github</li>
+                            <li>Visual Studio Code</li>
+                            <li>LiveServer</li>
+                            <li>GLPI</li>
+                        </ul>
+                    </div>
+                    <div class="item3">
+                        <ul class="atout">
+                            <h2>Langues:</h2>
+                            <li>Anglais</li>
+                            <li>Espagnol</li>
 
+                            <h2>Atouts:</h2>
+                            <li>Rigueur</li>
+                            <li>Sang-froid</li>
                         </ul>
                     </div>
                 </div>
-                
             </div>
 
+        </div>
 
 
-            <!--ecran 3-->
-            <div class="ecran ecran3" id="formation">
-                <h2>formation</h2>
-            </div>
 
-
-            <!--ecran 4-->
-            <div class="ecran ecran4" id="portfolio">
-                    <h2>Portfolio</h2>
-            </div>
-
-
-            <!--ecran 5-->
-            <div class="ecran ecran5" id="a_propos">
-                    <h2>A propos</h2>
-            </div>
-
-
-            <!--ecran 6-->
-            <div class="ecran ecran6" id="contact">
-                <h2>Contact</h2>
-            </div>
+        <!--ecran 3-->
+        <div class="ecran ecran3" id="formation">
+            <h2>Formation</h2>
 
 
         </div>
 
-        <!--Redirection vers les différentes parties via le menu-->
-        <script src="js/menu.js"></script>
-    </body>
+
+        <!--ecran 4-->
+        <div class="ecran ecran4" id="portfolio">
+            <h2>Portfolio</h2>
+        </div>
+
+
+        <!--ecran 5-->
+        <div class="ecran ecran5" id="a_propos">
+            <h2>A propos</h2>
+        </div>
+
+
+        <!--ecran 6-->
+        <div class="ecran ecran6" id="contact">
+            <h2>Contact</h2>
+
+            <div id="result-form">
+            </div>
+            <div class="contain-tout">
+                <div class="form-container">
+                    <form method="post" id="contact-form">
+                        <div>
+                            <label for="nom">Nom : *</label>
+                            <input type="text" name="nom" id="nom" required minlength="3" maxlength="20">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <label for="email">Adresse email : *</label>
+                            <input type="email" name="email" id="email" minlength="6" maxlength="50">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <label for="telephone">Téléphone :</label>
+                            <input type="text" name="telephone" id="telephone">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <label for="message">Message : *</label>
+                            <textarea name="message" id="message" name="message" required minlength="10"
+                                maxlength="250"></textarea>
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input class="btn" id="submit" type="submit" value="Envoyer">
+                        </div>
+                    </form>
+                </div>
+                <div class="form-image">
+                    <img src="iphone.jpg" alt="image contact">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--Redirection vers les différentes parties via le menu-->
+    <script src="js/menu.js"></script>
+    <script src="js/email.js"></script>
+</body>
+
 </html>
